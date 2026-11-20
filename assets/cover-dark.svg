@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<style>
+ .fade{animation:fade .8s ease-out both}
+ .pop{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.3,1.6,.5,1) both}
+ .draw{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.6s ease-out .1s forwards}
+ .scan{animation:scan 1.5s cubic-bezier(.4,0,.2,1) .05s both}
+ .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 1.4s ease-out 1.7s 3 both}
+ @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+ @keyframes pop{0%{opacity:0;transform:scale(.2)}100%{opacity:1;transform:scale(1)}}
+ @keyframes draw{to{stroke-dashoffset:0}}
+ @keyframes scan{0%{opacity:0;transform:translateX(0)}10%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translateX(1010px)}}
+ @keyframes pulse{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.4)}}
+ @media (prefers-reduced-motion: reduce){.fade,.pop,.scan,.pulse{animation:none}.draw{animation:none;stroke-dashoffset:0}.scan,.pulse{opacity:0}}
+</style>
+<rect width="1200" height="380" rx="10" fill="#0d1117"/>
+<circle cx="54" cy="40" r="5" fill="#3fb950"/>
+<circle class="pulse" cx="54" cy="40" r="5" fill="none" stroke="#3fb950" stroke-width="2"/>
+<text x="68" y="44" font-size="12" font-weight="700" letter-spacing="3" fill="#e6edf3">OPEN TO END-OF-STUDY INTERNSHIPS</text>
+<text x="1152" y="44" font-size="13" text-anchor="end" fill="#8b949e">Tunis, Tunisia · @FidaMarzouk</text>
+<line x1="48" y1="66" x2="1152" y2="66" stroke="#30363d" stroke-width="2"/>
+<text class="fade" x="48" y="114" font-size="13" font-weight="700" letter-spacing="3" fill="#f0883e">M.SC. BIG DATA ANALYTICS · IHEC CARTHAGE</text>
+<text class="fade" style="animation-delay:.1s" x="44" y="200" font-family="Georgia, 'Times New Roman', serif" font-size="80" fill="#e6edf3">Fida Marzouk</text>
+<text class="fade" style="animation-delay:.2s" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="22" fill="#58a6ff"><tspan x="48" y="248">I build AI/ML systems for real business problems,</tspan><tspan x="48" y="277">and the evaluation that keeps them honest.</tspan></text>
+<line x1="700" y1="96" x2="700" y2="290" stroke="#30363d"/>
+<g class="fade" style="animation-delay:0.35s"><text x="744" y="210" font-family="Georgia, 'Times New Roman', serif" font-size="64" fill="#e6edf3">200</text><rect x="744" y="234" width="8" height="8" rx="2" fill="#3fb950"/><text x="758" y="242" font-size="10" letter-spacing="1.5" fill="#8b949e">CONTRIBUTIONS IN 2026</text></g>
+<g class="fade" style="animation-delay:0.47s"><text x="964" y="210" font-family="Georgia, 'Times New Roman', serif" font-size="64" fill="#e6edf3">7</text><rect x="964" y="234" width="8" height="8" rx="2" fill="#58a6ff"/><text x="978" y="242" font-size="10" letter-spacing="1.5" fill="#8b949e">PUBLIC REPOSITORIES</text></g>
+<line x1="48" y1="320" x2="1152" y2="320" stroke="#30363d"/>
+<text x="48" y="348" font-size="12" fill="#8b949e">Updated 20 November 2026 from GitHub activity</text>
+<text x="1152" y="348" font-size="12" text-anchor="end" fill="#8b949e">github.com/FidaMarzouk</text>
+</svg>

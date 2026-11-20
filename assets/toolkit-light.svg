@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<style>
+ .fade{animation:fade .8s ease-out both}
+ .pop{transform-box:fill-box;transform-origin:center;animation:pop .45s cubic-bezier(.3,1.6,.5,1) both}
+ .draw{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.6s ease-out .1s forwards}
+ .scan{animation:scan 1.5s cubic-bezier(.4,0,.2,1) .05s both}
+ .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 1.4s ease-out 1.7s 3 both}
+ @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+ @keyframes pop{0%{opacity:0;transform:scale(.2)}100%{opacity:1;transform:scale(1)}}
+ @keyframes draw{to{stroke-dashoffset:0}}
+ @keyframes scan{0%{opacity:0;transform:translateX(0)}10%{opacity:.9}85%{opacity:.9}100%{opacity:0;transform:translateX(1010px)}}
+ @keyframes pulse{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.4)}}
+ @media (prefers-reduced-motion: reduce){.fade,.pop,.scan,.pulse{animation:none}.draw{animation:none;stroke-dashoffset:0}.scan,.pulse{opacity:0}}
+</style>
+<rect width="1200" height="420" rx="10" fill="#ffffff"/>
+<text x="48" y="44" font-size="12" font-weight="700" letter-spacing="3" fill="#1f2328">THE TOOLKIT</text>
+<text x="1152" y="44" font-size="12" text-anchor="end" fill="#59636e">Technical skills</text>
+<line x1="48" y1="70" x2="1152" y2="70" stroke="#d0d7de"/>
+<rect x="48" y="90" width="4" height="26" rx="2" fill="#0969da"/>
+<text x="64" y="109" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#1f2328">Programming Languages</text>
+<g class="fade" style="animation-delay:0.10s"><rect x="320" y="87" width="70" height="30" rx="15" fill="#f6f8fa" stroke="#0969da" stroke-opacity=".7"/><text x="355" y="107" font-size="13" text-anchor="middle" fill="#1f2328">Python</text></g>
+<g class="fade" style="animation-delay:0.13s"><rect x="400" y="87" width="56" height="30" rx="15" fill="#f6f8fa" stroke="#0969da" stroke-opacity=".7"/><text x="428" y="107" font-size="13" text-anchor="middle" fill="#1f2328">Java</text></g>
+<g class="fade" style="animation-delay:0.16s"><rect x="466" y="87" width="100" height="30" rx="15" fill="#f6f8fa" stroke="#0969da" stroke-opacity=".7"/><text x="516" y="107" font-size="13" text-anchor="middle" fill="#1f2328">JavaScript</text></g>
+<g class="fade" style="animation-delay:0.19s"><rect x="576" y="87" width="48" height="30" rx="15" fill="#f6f8fa" stroke="#0969da" stroke-opacity=".7"/><text x="600" y="107" font-size="13" text-anchor="middle" fill="#1f2328">SQL</text></g>
+<line x1="48" y1="136" x2="1152" y2="136" stroke="#d0d7de"/>
+<rect x="48" y="156" width="4" height="26" rx="2" fill="#1a7f37"/>
+<text x="64" y="175" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#1f2328">AI &amp; Data Science</text>
+<g class="fade" style="animation-delay:0.22s"><rect x="320" y="153" width="144" height="30" rx="15" fill="#f6f8fa" stroke="#1a7f37" stroke-opacity=".7"/><text x="392" y="173" font-size="13" text-anchor="middle" fill="#1f2328">Machine Learning</text></g>
+<g class="fade" style="animation-delay:0.25s"><rect x="474" y="153" width="48" height="30" rx="15" fill="#f6f8fa" stroke="#1a7f37" stroke-opacity=".7"/><text x="498" y="173" font-size="13" text-anchor="middle" fill="#1f2328">NLP</text></g>
+<g class="fade" style="animation-delay:0.28s"><rect x="533" y="153" width="48" height="30" rx="15" fill="#f6f8fa" stroke="#1a7f37" stroke-opacity=".7"/><text x="557" y="173" font-size="13" text-anchor="middle" fill="#1f2328">LLM</text></g>
+<g class="fade" style="animation-delay:0.31s"><rect x="591" y="153" width="48" height="30" rx="15" fill="#f6f8fa" stroke="#1a7f37" stroke-opacity=".7"/><text x="615" y="173" font-size="13" text-anchor="middle" fill="#1f2328">RAG</text></g>
+<line x1="48" y1="202" x2="1152" y2="202" stroke="#d0d7de"/>
+<rect x="48" y="222" width="4" height="26" rx="2" fill="#bc4c00"/>
+<text x="64" y="241" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#1f2328">Big Data</text>
+<g class="fade" style="animation-delay:0.34s"><rect x="320" y="219" width="70" height="30" rx="15" fill="#f6f8fa" stroke="#bc4c00" stroke-opacity=".7"/><text x="355" y="239" font-size="13" text-anchor="middle" fill="#1f2328">Hadoop</text></g>
+<g class="fade" style="animation-delay:0.37s"><rect x="400" y="219" width="56" height="30" rx="15" fill="#f6f8fa" stroke="#bc4c00" stroke-opacity=".7"/><text x="428" y="239" font-size="13" text-anchor="middle" fill="#1f2328">Hive</text></g>
+<g class="fade" style="animation-delay:0.40s"><rect x="466" y="219" width="48" height="30" rx="15" fill="#f6f8fa" stroke="#bc4c00" stroke-opacity=".7"/><text x="490" y="239" font-size="13" text-anchor="middle" fill="#1f2328">Pig</text></g>
+<g class="fade" style="animation-delay:0.43s"><rect x="524" y="219" width="63" height="30" rx="15" fill="#f6f8fa" stroke="#bc4c00" stroke-opacity=".7"/><text x="556" y="239" font-size="13" text-anchor="middle" fill="#1f2328">Spark</text></g>
+<g class="fade" style="animation-delay:0.46s"><rect x="597" y="219" width="93" height="30" rx="15" fill="#f6f8fa" stroke="#bc4c00" stroke-opacity=".7"/><text x="644" y="239" font-size="13" text-anchor="middle" fill="#1f2328">ELK Stack</text></g>
+<line x1="48" y1="268" x2="1152" y2="268" stroke="#d0d7de"/>
+<rect x="48" y="288" width="4" height="26" rx="2" fill="#bf8700"/>
+<text x="64" y="307" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#1f2328">DevOps &amp; Tools</text>
+<g class="fade" style="animation-delay:0.49s"><rect x="320" y="285" width="48" height="30" rx="15" fill="#f6f8fa" stroke="#bf8700" stroke-opacity=".7"/><text x="344" y="305" font-size="13" text-anchor="middle" fill="#1f2328">Git</text></g>
+<g class="fade" style="animation-delay:0.52s"><rect x="378" y="285" width="70" height="30" rx="15" fill="#f6f8fa" stroke="#bf8700" stroke-opacity=".7"/><text x="413" y="305" font-size="13" text-anchor="middle" fill="#1f2328">Docker</text></g>
+<g class="fade" style="animation-delay:0.55s"><rect x="459" y="285" width="70" height="30" rx="15" fill="#f6f8fa" stroke="#bf8700" stroke-opacity=".7"/><text x="494" y="305" font-size="13" text-anchor="middle" fill="#1f2328">Tekton</text></g>
+<line x1="48" y1="334" x2="1152" y2="334" stroke="#d0d7de"/>
+<rect x="48" y="354" width="4" height="26" rx="2" fill="#8250df"/>
+<text x="64" y="373" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#1f2328">Web Development</text>
+<g class="fade" style="animation-delay:0.58s"><rect x="320" y="351" width="78" height="30" rx="15" fill="#f6f8fa" stroke="#8250df" stroke-opacity=".7"/><text x="359" y="371" font-size="13" text-anchor="middle" fill="#1f2328">ReactJS</text></g>
+<g class="fade" style="animation-delay:0.61s"><rect x="408" y="351" width="78" height="30" rx="15" fill="#f6f8fa" stroke="#8250df" stroke-opacity=".7"/><text x="447" y="371" font-size="13" text-anchor="middle" fill="#1f2328">Node.js</text></g>
+<line x1="48" y1="400" x2="1152" y2="400" stroke="#d0d7de"/>
+</svg>
