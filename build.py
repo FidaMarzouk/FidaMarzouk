@@ -44,8 +44,8 @@ def svg_open(W, Hh, c):
 
 
 def header(c, left, right, y=44):
-    return [f'<text x="48" y="{y}" font-size="12" font-weight="700" letter-spacing="3" fill="{c["text"]}">{left}</text>',
-            f'<text x="1152" y="{y}" font-size="12" text-anchor="end" fill="{c["muted"]}">{right}</text>']
+    return [f'<text x="48" y="{y}" font-size="14" font-weight="700" letter-spacing="3" fill="{c["text"]}">{left}</text>',
+            f'<text x="1152" y="{y}" font-size="14" text-anchor="end" fill="{c["muted"]}">{right}</text>']
 
 
 # ---------------------------------------------------------------- cover
@@ -61,25 +61,24 @@ def cover(t):
     s = svg_open(W, Hh, c)
     s += [f'<circle cx="54" cy="40" r="5" fill="{c["green"]}"/>',
           f'<circle class="pulse" cx="54" cy="40" r="5" fill="none" stroke="{c["green"]}" stroke-width="2"/>',
-          f'<text x="68" y="44" font-size="12" font-weight="700" letter-spacing="3" fill="{c["text"]}">OPEN TO END-OF-STUDY INTERNSHIPS</text>',
-          f'<text x="1152" y="44" font-size="13" text-anchor="end" fill="{c["muted"]}">Tunis, Tunisia · @{LOGIN}</text>',
+          f'<text x="68" y="45" font-size="14" font-weight="700" letter-spacing="3" fill="{c["text"]}">OPEN TO END-OF-STUDY INTERNSHIPS</text>',
+          f'<text x="1152" y="45" font-size="15" text-anchor="end" fill="{c["muted"]}">Tunis, Tunisia · @{LOGIN}</text>',
           f'<line x1="48" y1="66" x2="1152" y2="66" stroke="{c["rule"]}" stroke-width="2"/>',
-          f'<text class="fade" x="48" y="114" font-size="13" font-weight="700" letter-spacing="3" fill="{c["orange"]}">M.SC. BIG DATA ANALYTICS · IHEC CARTHAGE</text>',
+          f'<text class="fade" x="48" y="114" font-size="15" font-weight="700" letter-spacing="3" fill="{c["orange"]}">M.SC. BIG DATA ANALYTICS · IHEC CARTHAGE</text>',
           f'<text class="fade" style="animation-delay:.1s" x="44" y="200" font-family="{SERIF}" font-size="80" fill="{c["text"]}">Fida Marzouk</text>',
-          f'<text class="fade" style="animation-delay:.2s" font-family="{SERIF}" font-style="italic" font-size="22" fill="{c["blue"]}">'
-          f'<tspan x="48" y="248">I build AI/ML systems for real business problems,</tspan>'
-          f'<tspan x="48" y="277">and the evaluation that keeps them honest.</tspan></text>',
+          f'<text class="fade" style="animation-delay:.2s" font-family="{SERIF}" font-style="italic" font-size="25" fill="{c["blue"]}">'
+          f'<tspan x="48" y="250">I build AI/ML systems for real business problems,</tspan>'
+          f'<tspan x="48" y="282">and the evaluation that keeps them honest.</tspan></text>',
           f'<line x1="700" y1="96" x2="700" y2="290" stroke="{c["rule"]}"/>']
     for i, (num, label, col) in enumerate(figs):
-        x = 744 + i * 220
+        x = 740 + i * 222
         y = 210
         s.append(f'<g class="fade" style="animation-delay:{.35+i*.12:.2f}s">'
-                 f'<text x="{x}" y="{y}" font-family="{SERIF}" font-size="64" fill="{c["text"]}">{num}</text>'
-                 f'<rect x="{x}" y="{y+24}" width="8" height="8" rx="2" fill="{c[col]}"/>'
-                 f'<text x="{x+14}" y="{y+32}" font-size="10" letter-spacing="1.5" fill="{c["muted"]}">{label}</text></g>')
+                 f'<text x="{x}" y="{y}" font-family="{SERIF}" font-size="72" fill="{c["text"]}">{num}</text>'
+                 f'<rect x="{x}" y="{y+25}" width="10" height="10" rx="2" fill="{c[col]}"/>'
+                 f'<text x="{x+16}" y="{y+35}" font-size="13" letter-spacing="0.8" fill="{c["muted"]}">{label}</text></g>')
     s += [f'<line x1="48" y1="320" x2="1152" y2="320" stroke="{c["rule"]}"/>',
-          f'<text x="48" y="348" font-size="12" fill="{c["muted"]}">Updated {UPDATED.strftime("%-d %B %Y")} from GitHub activity</text>',
-          f'<text x="1152" y="348" font-size="12" text-anchor="end" fill="{c["muted"]}">github.com/{LOGIN}</text>',
+          f'<text x="1152" y="350" font-size="14" text-anchor="end" fill="{c["muted"]}">github.com/{LOGIN}</text>',
           '</svg>']
     return "\n".join(s)
 
@@ -96,21 +95,21 @@ TOOLKIT = [
 
 def toolkit(t):
     c = THEMES[t]
-    rowh, y0 = 66, 70
+    rowh, y0 = 72, 72
     Hh = y0 + rowh * len(TOOLKIT) + 20
     s = svg_open(1200, Hh, c) + header(c, "THE TOOLKIT", "Technical skills")
     k = 0
     for r, (sector, col, items) in enumerate(TOOLKIT):
         y = y0 + r * rowh
         s += [f'<line x1="48" y1="{y}" x2="1152" y2="{y}" stroke="{c["rule"]}"/>',
-              f'<rect x="48" y="{y+20}" width="4" height="26" rx="2" fill="{c[col]}"/>',
-              f'<text x="64" y="{y+39}" font-family="{SERIF}" font-size="20" fill="{c["text"]}">{sector}</text>']
-        x = 320
+              f'<rect x="48" y="{y+21}" width="4" height="30" rx="2" fill="{c[col]}"/>',
+              f'<text x="64" y="{y+43}" font-family="{SERIF}" font-size="23" fill="{c["text"]}">{sector}</text>']
+        x = 360
         for it in items:
-            w = len(it) * 7.4 + 26
-            s.append(f'<g class="fade" style="animation-delay:{.1+k*.03:.2f}s"><rect x="{x:.0f}" y="{y+17}" width="{w:.0f}" height="30" rx="15" fill="{c["panel"]}" stroke="{c[col]}" stroke-opacity=".7"/>'
-                     f'<text x="{x+w/2:.0f}" y="{y+37}" font-size="13" text-anchor="middle" fill="{c["text"]}">{it}</text></g>')
-            x += w + 10
+            w = len(it) * 9.0 + 32
+            s.append(f'<g class="fade" style="animation-delay:{.1+k*.03:.2f}s"><rect x="{x:.0f}" y="{y+18}" width="{w:.0f}" height="36" rx="18" fill="{c["panel"]}" stroke="{c[col]}" stroke-opacity=".7"/>'
+                     f'<text x="{x+w/2:.0f}" y="{y+41}" font-size="16" text-anchor="middle" fill="{c["text"]}">{it}</text></g>')
+            x += w + 12
             k += 1
     s += [f'<line x1="48" y1="{y0+rowh*len(TOOLKIT)}" x2="1152" y2="{y0+rowh*len(TOOLKIT)}" stroke="{c["rule"]}"/>', '</svg>']
     return "\n".join(s)
@@ -138,13 +137,13 @@ def grid(year, t):
     c = THEMES[t]
     y = int(year)
     days, total, active, streak, top = year_stats(year)
-    W, Hh = 1200, 300
-    gx, gy, cell, step = 112, 112, 15, 19
+    W, Hh = 1200, 312
+    gx, gy, cell, step = 112, 120, 15, 19
     s = svg_open(W, Hh, c)
     s += header(c, f'CONTRIBUTIONS · <tspan fill="{c["yellow"]}">{year}</tspan>', "Activity on github.com/" + LOGIN)
     unit = "contribution" if total == 1 else "contributions"
     if total:
-        bits = [f'<tspan font-family="{SERIF}" font-size="22" fill="{c["text"]}">{total}</tspan> {unit} in {year}',
+        bits = [f'<tspan font-family="{SERIF}" font-size="26" fill="{c["text"]}">{total}</tspan> {unit} in {year}',
                 f'{active} active day{"s" if active != 1 else ""}']
         if top and top[1] > 1:
             bits.append(f'busiest day <tspan fill="{c["yellow"]}">{top[0].strftime("%-d %b")}</tspan> ({top[1]})')
@@ -152,8 +151,8 @@ def grid(year, t):
             bits.append(f'longest streak {streak} days')
         line = '   ·   '.join(bits)
     else:
-        line = f'<tspan font-family="{SERIF}" font-size="22" fill="{c["text"]}">0</tspan> public contributions in {year}'
-    s.append(f'<text class="fade" x="48" y="80" font-size="13" fill="{c["muted"]}">{line}</text>')
+        line = f'<tspan font-family="{SERIF}" font-size="26" fill="{c["text"]}">0</tspan> public contributions in {year}'
+    s.append(f'<text class="fade" x="48" y="82" font-size="16" fill="{c["muted"]}">{line}</text>')
 
     jan1 = dt.date(y, 1, 1)
     start = jan1 - dt.timedelta(days=(jan1.weekday() + 1) % 7)  # Sunday on/before Jan 1
@@ -168,7 +167,7 @@ def grid(year, t):
             v = days.get(d, 0)
             if d.day <= 7 and d.month not in months_done and row == 0 or (d == jan1 and 1 not in months_done):
                 months_done.add(d.month)
-                s.append(f'<text x="{x}" y="{gy-10}" font-size="11" fill="{c["muted"]}">{d.strftime("%b")}</text>')
+                s.append(f'<text x="{x}" y="{gy-10}" font-size="14" fill="{c["muted"]}">{d.strftime("%b")}</text>')
             is_top = top and d == top[0] and v > 1
             fill = c["yellow"] if is_top else (c["empty"] if v == 0 else c["g"][level(v)])
             delay = .05 + col * .022 + row * .03
@@ -179,18 +178,18 @@ def grid(year, t):
                 s.append(f'<rect class="pulse" x="{x}" y="{yy}" width="{cell}" height="{cell}" rx="3" fill="none" stroke="{c["yellow"]}" stroke-width="2"/>')
         d += dt.timedelta(days=1)
     for r, lab in ((1, "Mon"), (3, "Wed"), (5, "Fri")):
-        s.append(f'<text x="{gx-14}" y="{gy + r*step + 12}" font-size="11" text-anchor="end" fill="{c["muted"]}">{lab}</text>')
+        s.append(f'<text x="{gx-14}" y="{gy + r*step + 13}" font-size="14" text-anchor="end" fill="{c["muted"]}">{lab}</text>')
     # the twist: a scanner beam sweeps the year as the cells pop in
     s.append(f'<rect class="scan" x="{gx-6}" y="{gy-4}" width="3" height="{7*step+4}" rx="1.5" fill="{c["blue"]}"/>')
     if not total:
-        s.append(f'<text class="fade" style="animation-delay:1.4s" x="{gx + 26*step}" y="{gy + 3.5*step + 6}" text-anchor="middle" font-family="{SERIF}" font-style="italic" font-size="18" fill="{c["muted"]}">A quiet year on GitHub</text>')
+        s.append(f'<text class="fade" style="animation-delay:1.4s" x="{gx + 26*step}" y="{gy + 3.5*step + 6}" text-anchor="middle" font-family="{SERIF}" font-style="italic" font-size="22" fill="{c["muted"]}">A quiet year on GitHub</text>')
     ly = gy + 7 * step + 26
-    s.append(f'<text x="{gx}" y="{ly+11}" font-size="11" fill="{c["muted"]}">Green follows GitHub\'s contribution scale · <tspan fill="{c["yellow"]}">yellow</tspan> marks the busiest day</text>')
-    lx = 1152 - 5 * 19 - 34
-    s.append(f'<text x="{lx-8}" y="{ly+11}" font-size="11" text-anchor="end" fill="{c["muted"]}">Less</text>')
+    s.append(f'<text x="{gx}" y="{ly+12}" font-size="14" fill="{c["muted"]}">Green follows GitHub\'s contribution scale · <tspan fill="{c["yellow"]}">yellow</tspan> marks the busiest day</text>')
+    lx = 1152 - 5 * 19 - 44
+    s.append(f'<text x="{lx-8}" y="{ly+12}" font-size="14" text-anchor="end" fill="{c["muted"]}">Less</text>')
     for i, f in enumerate([c["empty"]] + c["g"]):
         s.append(f'<rect x="{lx + i*19}" y="{ly}" width="{cell}" height="{cell}" rx="3" fill="{f}"/>')
-    s.append(f'<text x="{lx + 5*19 + 4}" y="{ly+11}" font-size="11" fill="{c["muted"]}">More</text>')
+    s.append(f'<text x="{lx + 5*19 + 6}" y="{ly+12}" font-size="14" fill="{c["muted"]}">More</text>')
     s.append('</svg>')
     return "\n".join(s)
 
@@ -224,7 +223,7 @@ ENTRIES = [  # (when, title parts, line 1, line 2, colour)
 def route(t):
     c = THEMES[t]
     W = 1200
-    ey0, eh = 330, 92
+    ey0, eh = 350, 112
     Hh = ey0 + eh * len(ENTRIES) - 6
     s = svg_open(W, Hh, c) + header(c, "THE ROUTE", "So far, and where it's heading")
     s.append(f'<line x1="48" y1="64" x2="1152" y2="64" stroke="{c["rule"]}"/>')
@@ -236,14 +235,14 @@ def route(t):
         x = ax0 + 50 + i * (ax1 - ax0 - 110) / (n - 1)
         up = i % 2 == 0
         d = .2 + i * .17
-        ty = ay - 74 if up else ay + 46
+        ty = ay - 84 if up else ay + 48
         tick = (ay - 34, ay - 8) if up else (ay + 8, ay + 30)
         now = when == "NOW"
         s.append(f'<g class="fade" style="animation-delay:{d+.1:.2f}s">'
                  f'<line x1="{x:.0f}" y1="{tick[0]}" x2="{x:.0f}" y2="{tick[1]}" stroke="{c["rule"]}"/>'
-                 f'<text x="{x:.0f}" y="{ty}" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="{c[col] if now else c["muted"]}">{when}</text>'
-                 f'<text x="{x:.0f}" y="{ty+20}" text-anchor="middle" font-family="{SERIF}" font-size="15" fill="{c["text"]}">{title}</text>'
-                 f'<text x="{x:.0f}" y="{ty+37}" text-anchor="middle" font-size="11" fill="{c["muted"]}">{sub}</text></g>')
+                 f'<text x="{x:.0f}" y="{ty}" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="2" fill="{c[col] if now else c["muted"]}">{when}</text>'
+                 f'<text x="{x:.0f}" y="{ty+23}" text-anchor="middle" font-family="{SERIF}" font-size="18" fill="{c["text"]}">{title}</text>'
+                 f'<text x="{x:.0f}" y="{ty+43}" text-anchor="middle" font-size="13.5" fill="{c["muted"]}">{sub}</text></g>')
         s.append(f'<circle class="pop" style="animation-delay:{d:.2f}s" cx="{x:.0f}" cy="{ay}" r="{7 if now else 6}" fill="{c[col]}" stroke="{c["bg"]}" stroke-width="3"/>')
         if now:
             s.append(f'<circle class="pulse" cx="{x:.0f}" cy="{ay}" r="6" fill="none" stroke="{c[col]}" stroke-width="2"/>')
@@ -254,11 +253,11 @@ def route(t):
         d = 1.0 + i * .12
         head = f'<tspan fill="{c["text"]}">{parts[0]}</tspan>' + "".join(f'<tspan fill="{c["muted"]}">  ·  {p}</tspan>' for p in parts[1:])
         s.append(f'<g class="fade" style="animation-delay:{d:.2f}s">'
-                 f'<text x="48" y="{y+14}" font-size="12" font-weight="700" letter-spacing="1.5" fill="{c["muted"]}">{yrs}</text>'
-                 f'<rect x="146" y="{y-2}" width="8" height="20" rx="2" fill="{c[col]}"/>'
-                 f'<text x="176" y="{y+15}" font-family="{SERIF}" font-size="19" xml:space="preserve">{head}</text>'
-                 f'<text x="176" y="{y+40}" font-size="13.5" fill="{c["text"]}" fill-opacity=".86">{l1}</text>'
-                 + (f'<text x="176" y="{y+60}" font-size="13.5" fill="{c["muted"]}">{l2}</text>' if l2 else '') + '</g>')
+                 f'<text x="48" y="{y+16}" font-size="14" font-weight="700" letter-spacing="1.5" fill="{c["muted"]}">{yrs}</text>'
+                 f'<rect x="146" y="{y-2}" width="8" height="24" rx="2" fill="{c[col]}"/>'
+                 f'<text x="176" y="{y+18}" font-family="{SERIF}" font-size="23" xml:space="preserve">{head}</text>'
+                 f'<text x="176" y="{y+48}" font-size="16" fill="{c["text"]}" fill-opacity=".86">{l1}</text>'
+                 + (f'<text x="176" y="{y+73}" font-size="16" fill="{c["muted"]}">{l2}</text>' if l2 else '') + '</g>')
     s.append('</svg>')
     return "\n".join(s)
 
@@ -311,62 +310,4 @@ readme = f"""{pic('cover', 'Fida Marzouk, M.Sc. Big Data Analytics student at IH
 **Repositories:** {' · '.join(f'[{n}](https://github.com/{LOGIN}/{r})' for n, r in REPOS)}
 """
 open(os.path.join(OUT, "README.md"), "w").write(readme)
-
-
-# ---------------------------------------------------------------- preview page
-def uri(name, t):
-    return "data:image/svg+xml;base64," + base64.b64encode(open(os.path.join(OUT, "assets", f"{name}-{t}.svg"), "rb").read()).decode()
-
-
-def img(name, alt):
-    return (f'<img class="d" src="{uri(name, "dark")}" alt="{H.escape(alt)}">'
-            f'<img class="l" src="{uri(name, "light")}" alt="{H.escape(alt)}">')
-
-
-contrib_html = "".join(
-    f'<details{" open" if i == 0 else ""} name="yr"><summary><b>{y}</b> · {year_stats(y)[1]} contributions</summary>{img("contributions-" + y, grid_alt(y))}</details>'
-    for i, y in enumerate(YEARS))
-repos_html = " · ".join(f'<a href="https://github.com/{LOGIN}/{r}">{n}</a>' for n, r in REPOS)
-
-preview = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Fida Marzouk · README preview</title>
-<style>
-:root{{--bg:#0d1117;--bd:#30363d;--tx:#e6edf3;--mu:#8b949e;--ln:#4493f8;--chip:#161b22}}
-body.light{{--bg:#ffffff;--bd:#d0d7de;--tx:#1f2328;--mu:#59636e;--ln:#0969da;--chip:#f6f8fa}}
-*{{box-sizing:border-box}}body{{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 -apple-system,'Segoe UI',Helvetica,Arial,sans-serif;transition:background .2s}}
-.bar{{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;max-width:980px;margin:24px auto 12px;padding:0 16px}}
-.who{{color:var(--mu)}}.who b{{color:var(--tx)}}
-.tg{{display:flex;border:1px solid var(--bd);border-radius:6px;overflow:hidden}}
-.tg button{{background:var(--chip);color:var(--tx);border:0;padding:6px 14px;cursor:pointer;font:inherit}}
-.tg button.on{{background:#238636;color:#fff}}
-.box{{max-width:980px;margin:0 auto 40px;border:1px solid var(--bd);border-radius:6px}}
-.hd{{padding:10px 16px;border-bottom:1px solid var(--bd);font-size:12px;color:var(--mu)}}
-.md{{padding:24px 32px}}.md img{{width:100%;display:block;border-radius:6px;margin:16px 0}}
-body:not(.light) .l, body.light .d{{display:none}}
-a{{color:var(--ln);text-decoration:none}}a:hover{{text-decoration:underline}}
-.badges{{display:flex;gap:6px;flex-wrap:wrap}}.badge{{font-size:11px;color:#fff !important;text-decoration:none !important;border-radius:3px;padding:2px 8px;font-weight:600}}
-details{{margin:4px 0}}summary{{cursor:pointer;padding:4px 0}}details img{{margin-top:8px}}
-.hint{{font-size:12px;color:var(--mu);margin:16px 0 4px}}
-@media(max-width:600px){{.md{{padding:16px}}}}
-</style></head><body>
-<div class="bar"><div class="who"><b>FidaMarzouk</b> / README.md · profile preview</div>
-<div class="tg"><button class="on" onclick="th(0,this)">Dark</button><button onclick="th(1,this)">Light</button></div></div>
-<div class="box"><div class="hd">README.md</div><div class="md">
-{img('cover', 'Cover')}
-<p>{H.escape(INTRO)}</p>
-<div class="badges"><a class="badge" style="background:#0969da" href="https://linkedin.com/in/fida-marzouk" target="_blank" rel="noopener">in LinkedIn · fida-marzouk</a><a class="badge" style="background:#1a7f37" href="mailto:fidamarzouk@gmail.com">✉ Email · fidamarzouk@gmail.com</a></div>
-{img('toolkit', 'Toolkit')}
-<p class="hint">Click a year to switch (on GitHub these are collapsible rows)</p>
-{contrib_html}
-{img('route', 'The route')}
-<p><b>Repositories:</b> {repos_html}</p>
-</div></div>
-<script>{{
-function replay(root){{root.querySelectorAll('img').forEach(i=>{{const s=i.src;i.src='';i.src=s}})}}
-window.th=function(l,b){{document.body.classList.toggle('light',!!l);document.querySelectorAll('.tg button').forEach(x=>x.classList.remove('on'));b.classList.add('on');replay(document)}};
-document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{{if(d.open){{document.querySelectorAll('details').forEach(o=>{{if(o!==d)o.open=false}});replay(d)}}}}));
-}}</script>
-</body></html>"""
-if os.environ.get("PREVIEW"):
-    open(os.path.join(OUT, "preview.html"), "w").write(preview)
 print("ok", YEARS)
