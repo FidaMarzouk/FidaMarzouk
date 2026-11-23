@@ -300,6 +300,7 @@ readme = f"""{pic('cover', 'Fida Marzouk, M.Sc. Big Data Analytics student at IH
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-fida--marzouk-0969da?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/fida-marzouk)
 [![Email](https://img.shields.io/badge/Email-fidamarzouk%40gmail.com-1a7f37?style=flat-square&logo=gmail&logoColor=white)](mailto:fidamarzouk@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-fidamarzouk.github.io-bc4c00?style=flat-square&logo=googlechrome&logoColor=white)](https://fidamarzouk.github.io)
 
 {pic('toolkit', 'Technical skills. Programming languages: Python, Java, JavaScript, SQL. AI and data science: Machine Learning, NLP, LLM, RAG. Big data: Hadoop, Hive, Pig, Spark, ELK Stack. DevOps and tools: Git, Docker, Tekton. Web development: ReactJS, Node.js.')}
 
