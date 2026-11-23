@@ -8,6 +8,7 @@ Master’s student in Big Data Analytics, I focus on building AI/ML systems that
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-fida--marzouk-0969da?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/fida-marzouk)
 [![Email](https://img.shields.io/badge/Email-fidamarzouk%40gmail.com-1a7f37?style=flat-square&logo=gmail&logoColor=white)](mailto:fidamarzouk@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-fidamarzouk.github.io-bc4c00?style=flat-square&logo=googlechrome&logoColor=white)](https://fidamarzouk.github.io)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/toolkit-dark.svg">
@@ -16,12 +17,12 @@ Master’s student in Big Data Analytics, I focus on building AI/ML systems that
 </picture>
 
 <details open>
-<summary><b>2026</b> · 264 contributions</summary>
+<summary><b>2026</b> · 268 contributions</summary>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-2026-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/contributions-2026-light.svg">
-  <img alt="Contribution grid for 2026: 264 public contributions on 46 active days, busiest day 14 October with 29." src="assets/contributions-2026-dark.svg" width="100%">
+  <img alt="Contribution grid for 2026: 268 public contributions on 48 active days, busiest day 14 October with 29." src="assets/contributions-2026-dark.svg" width="100%">
 </picture>
 
 </details>

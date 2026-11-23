@@ -15,7 +15,7 @@
 <rect width="1200" height="312" rx="10" fill="#ffffff"/>
 <text x="48" y="44" font-size="14" font-weight="700" letter-spacing="3" fill="#1f2328">CONTRIBUTIONS · <tspan fill="#bf8700">2026</tspan></text>
 <text x="1152" y="44" font-size="14" text-anchor="end" fill="#59636e">Activity on github.com/FidaMarzouk</text>
-<text class="fade" x="48" y="82" font-size="16" fill="#59636e"><tspan font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1f2328">264</tspan> contributions in 2026   ·   46 active days   ·   busiest day <tspan fill="#bf8700">14 Oct</tspan> (29)   ·   longest streak 4 days</text>
+<text class="fade" x="48" y="82" font-size="16" fill="#59636e"><tspan font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1f2328">268</tspan> contributions in 2026   ·   48 active days   ·   busiest day <tspan fill="#bf8700">14 Oct</tspan> (29)   ·   longest streak 6 days</text>
 <text x="112" y="110" font-size="14" fill="#59636e">Jan</text>
 <rect class="pop" style="animation-delay:0.17s" x="112" y="196" width="15" height="15" rx="3" fill="#ebedf0"></rect>
 <rect class="pop" style="animation-delay:0.20s" x="112" y="215" width="15" height="15" rx="3" fill="#ebedf0"></rect>
@@ -353,8 +353,8 @@
 <rect class="pop" style="animation-delay:1.18s" x="986" y="196" width="15" height="15" rx="3" fill="#9be9a8"><title>2 contributions on 19 November 2026</title></rect>
 <rect class="pop" style="animation-delay:1.21s" x="986" y="215" width="15" height="15" rx="3" fill="#40c463"><title>4 contributions on 20 November 2026</title></rect>
 <rect class="pop" style="animation-delay:1.24s" x="986" y="234" width="15" height="15" rx="3" fill="#40c463"><title>5 contributions on 21 November 2026</title></rect>
-<rect class="pop" style="animation-delay:1.08s" x="1005" y="120" width="15" height="15" rx="3" fill="#ebedf0"></rect>
-<rect class="pop" style="animation-delay:1.11s" x="1005" y="139" width="15" height="15" rx="3" fill="#ebedf0"></rect>
+<rect class="pop" style="animation-delay:1.08s" x="1005" y="120" width="15" height="15" rx="3" fill="#9be9a8"><title>1 contribution on 22 November 2026</title></rect>
+<rect class="pop" style="animation-delay:1.11s" x="1005" y="139" width="15" height="15" rx="3" fill="#9be9a8"><title>3 contributions on 23 November 2026</title></rect>
 <rect class="pop" style="animation-delay:1.14s" x="1005" y="158" width="15" height="15" rx="3" fill="#ebedf0"></rect>
 <rect class="pop" style="animation-delay:1.17s" x="1005" y="177" width="15" height="15" rx="3" fill="#ebedf0"></rect>
 <rect class="pop" style="animation-delay:1.20s" x="1005" y="196" width="15" height="15" rx="3" fill="#ebedf0"></rect>
